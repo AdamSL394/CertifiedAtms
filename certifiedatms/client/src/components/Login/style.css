@@ -1,0 +1,48 @@
+
+#formoutline{
+    border:1px solid #2c3d94;
+    width: 30vw;
+    height:20rem;
+    margin:0 auto;
+    margin-top:10%;
+}
+#emailInput{
+    margin-top:15px!important ;
+    margin-left: 5%;
+    width:100%;
+    margin:0 auto;
+    justify-content: center;
+}
+#passwordInput{
+    margin-top:15px !important;
+    margin-left: 5%;
+    margin:0 auto;
+    justify-content: center;
+    width:100%;
+}
+#employeeLoginFont{
+    font-family: 'Clicker Script', cursive;
+    font-size: 3.5vw;
+    text-align: center;
+    color:#fdb040;
+}
+#centering{
+    width:90%;
+    margin:0 auto;
+}
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #fdb040; 
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #fdb040; 
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #fdb040; 
+}
+
+
+
+
+

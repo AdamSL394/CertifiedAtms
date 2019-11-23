@@ -1,0 +1,22 @@
+.form-group{
+    width:960px;
+    margin:0 auto;
+    margin-top:10%;
+
+    position: relative;
+}
+.paperAirPlane{
+    position: absolute;
+    bottom:0%;
+    right:0%;
+}
+.space-top{
+    margin-top:21px;
+}
+#directions{
+    font-size: 18px;
+    text-align: center;
+}
+#exampleInputPassword1{
+    height:6rem;
+}

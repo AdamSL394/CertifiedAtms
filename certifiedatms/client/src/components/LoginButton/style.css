@@ -1,0 +1,9 @@
+#loginButton{
+    border: 1px solid lightgray;
+    color:#fdb040;
+    margin-top: 15px;
+    margin-left:20px;
+}
+/* #loginButton:hover{
+    color:#2c3d94;
+} */
