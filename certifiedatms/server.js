@@ -4,16 +4,20 @@ const express      = require("express");
 const passport     = require('passport'); 
 const session      = require('express-session'); // cookie session
 const app  = express();
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 const routes = require("./routes");
 const db     = require("./models");
 const mysql = require ("mysql")
+
+if (process.env.JAWSDB_URL) {
+    let connection = mysql.createConnection(process.env.JAWSDB_URL)
+  }
 
 let connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "password",
-    database: "eventsDB"
+    database: "certifiedAtms"
 })
 
 connection.connect(function (err, result) {
@@ -30,9 +34,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // app.use(express.static("../client"));
 
-// if (process.env.NODE_ENV === "production") {
-    
-//   }
+
 
   app.use(session({
     key: 'user_sid',
