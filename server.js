@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5001;
 const routes = require("./routes");
 const db     = require("./models");
 const mysql = require ("mysql")
-const path = require("path");
+
 
 // if (process.env.JAWSDB_URL) {
 //     let connection = mysql.createConnection(process.env.JAWSDB_URL)
