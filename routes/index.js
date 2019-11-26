@@ -12,6 +12,8 @@ router.post('/signin', AuthRoutes)
 router.get('/logout', AuthRoutes)
 router.get("/auth", AuthRoutes)
 
+router.get('*', (req, res) => res.sendFile(path.resolve('client/src', 'index.html')))
+
 
 
 module.exports = router;
