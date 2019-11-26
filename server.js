@@ -9,9 +9,9 @@ const routes = require("./routes");
 const db     = require("./models");
 const mysql = require ("mysql")
 
-if (process.env.JAWSDB_URL) {
-    let connection = mysql.createConnection(process.env.JAWSDB_URL)
-  }
+// if (process.env.JAWSDB_URL) {
+//     let connection = mysql.createConnection(process.env.JAWSDB_URL)
+//   }
 
 let connection = mysql.createConnection({
     host: "localhost",
@@ -29,16 +29,14 @@ connection.connect(function (err, result) {
 
 
 require('./config/passport')(passport); // pass passport for configuration
-
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 if (process.env.NODE_ENV === 'production') {
     // Exprees will serve up production assets
     app.use(express.static("client/build"));
-
-
-    app.get('*', (req, res) => res.sendFile(path.resolve('client', 'index.html')))
+    app.get('*', (req, res) => res.sendFile(path.resolve('client/src', 'index.html')))
   }
 
 

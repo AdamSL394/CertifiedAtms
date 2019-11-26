@@ -24,15 +24,18 @@ class login extends Component {
 
             let loginOrSignup = e.currentTarget.textContent
             loginOrSignup = loginOrSignup.toLowerCase();
-            console.log(loginOrSignup)
+            let loginOrSignupNospace = loginOrSignup.replace(/\s+/g, '');
+            console.log(loginOrSignupNospace)
 
-            loginOrSignup === "sign up" ? this.handleSignUp(userData) : this.handleSignIn(userData)
+            loginOrSignupNospace === "signup" ? this.handleSignUp(userData):this.handleSignIn(userData)  
         }
     }
     handleSignUp = (userData) => {
+        
         this.setState({
             new: true
         })
+        console.log("we in sign up")
         Actions.handleSignUp(userData)
             .then(response => this.validateRes(response))
             // let pass = response.data.success

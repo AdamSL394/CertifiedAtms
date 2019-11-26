@@ -16,7 +16,7 @@ router.post('/signin', (req, res, next) => {
 
 // process the signup form
 router.post('/signup', (req, res, next) => {
-  console.log("signup", req)
+  console.log("signup ojsdfkjsbdfkjsbdfkjsbdf", req)
   passportAuthenticate('local-signup', req, res, next);
 
 });
