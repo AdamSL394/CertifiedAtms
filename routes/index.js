@@ -15,7 +15,7 @@ router.get("/auth", AuthRoutes)
 
 router.get('/',function (req, res) {
     console.log("hi___))_(*&^%$%^&*()(*&^%$%^&*(*&^%$%^&*()_)(*&^%$")
-    res.sendFile(path.join(__dirname, "../../client/build/index.html"))
+    res.sendFile(path.join(__dirname, "../client/build/index.html"))
 });
 
 module.exports = router;
