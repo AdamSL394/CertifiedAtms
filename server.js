@@ -39,7 +39,7 @@ if (process.env.NODE_ENV === 'production') {
     // app.use(express.static(path.resolve(__dirname,'build')));
     // app.use('/', (req, res) => res.sendFile(path.resolve(__dirname,'build', '../client/public/index.html'))
     // )
-    app.use(express.static(__dirname + './client/build'));
+    app.use(express.static( 'client/build'));
   }
 
 
