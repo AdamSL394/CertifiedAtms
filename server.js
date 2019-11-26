@@ -36,8 +36,8 @@ app.use(express.urlencoded({ extended: true }));
 
 if (process.env.NODE_ENV === 'production') {
     // Exprees will serve up production assets
-    app.use(express.static(path.resolve(_dirname,'build')));
-    app.get('*', (req, res) => res.sendFile(path.resolve(_dirname,'build', 'index.html'))
+    app.use(express.static(path.resolve(__dirname,'build')));
+    app.get('*', (req, res) => res.sendFile(path.resolve(__dirname,'build', 'index.html'))
     )
   }
 
